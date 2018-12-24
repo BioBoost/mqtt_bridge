@@ -1,0 +1,25 @@
+{
+  "name": "mqtt_bridge",
+  "version": "0.1.0",
+  "description": "MQTT bridge between two brokers",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioBoost/mqtt_bridge.git"
+  },
+  "keywords": [
+    "mqtt",
+    "broker",
+    "bridge"
+  ],
+  "author": "Nico De Witte (aka BioBoost)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BioBoost/mqtt_bridge/issues"
+  },
+  "homepage": "https://github.com/BioBoost/mqtt_bridge#readme"
+}
