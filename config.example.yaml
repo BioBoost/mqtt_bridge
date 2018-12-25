@@ -1,0 +1,10 @@
+source:
+  connection: tcp://<host>:1883
+  username: xxxxxxxxx
+  password: xxxxxxxxx
+  topic: xxxxxxxxx
+destination:
+  username: xxxxxxxxx
+  password: xxxxxxxxx
+  topic: xxxxxxxxx
+log: "false"
