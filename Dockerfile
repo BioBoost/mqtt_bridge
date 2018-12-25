@@ -18,5 +18,8 @@ COPY --chown=node:node . .
 # Switch to node user
 USER node
 
+# Configuration
+VOLUME /home/node/app/config.yaml
+
 # Run the app
 CMD [ "npm", "start" ]
