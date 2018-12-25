@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/BioBoost/mqtt_bridge#readme",
   "dependencies": {
-    "js-yaml": "^3.12.0"
+    "js-yaml": "^3.12.0",
+    "mqtt": "^2.18.8"
   }
 }
