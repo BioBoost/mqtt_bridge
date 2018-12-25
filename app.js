@@ -36,6 +36,21 @@ destination.on('connect', function () {
   console.log("Successfully connected to destination broker");
 });
 
+source.on('message', function (topic, message) {
+  // message is Buffer
+  var messageString = message.toString();
+
+  if (config.log === "true") {
+    console.log(topic + ": " + messageString + " => " + config.destination.topic);
+  }
+
+  destination.publish(config.destination.topic, messageString, function(err) {
+    if (err) {
+      console.log("Failed to publish: " + messageString);
+    }
+  });
+});
+
 if (process.platform === "win32") {
   var rl = require("readline").createInterface({
     input: process.stdin,
