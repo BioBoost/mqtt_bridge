@@ -27,3 +27,22 @@ source.on('connect', function () {
 destination.on('connect', function () {
   console.log("Successfully connected to destination broker");
 });
+
+if (process.platform === "win32") {
+  var rl = require("readline").createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  rl.on("SIGINT", function () {
+    process.emit("SIGINT");
+  });
+}
+
+process.on("SIGINT", function () {
+  //graceful shutdown
+  console.log("Shutting down");
+  source.end();
+  destination.end();
+  process.exit();
+});
