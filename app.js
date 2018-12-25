@@ -22,6 +22,14 @@ let destination  = mqtt.connect(config.destination.connection, {
 
 source.on('connect', function () {
   console.log("Successfully connected to source broker");
+
+  source.subscribe(config.source.topic, function (err) {
+    if (err) {
+      console.log("Failed to subscribe to source topic");
+    } else {
+      console.log("Successfully subscribed to source topic");
+    }
+  })
 });
 
 destination.on('connect', function () {
