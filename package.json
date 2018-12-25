@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/BioBoost/mqtt_bridge/issues"
   },
-  "homepage": "https://github.com/BioBoost/mqtt_bridge#readme"
+  "homepage": "https://github.com/BioBoost/mqtt_bridge#readme",
+  "dependencies": {
+    "js-yaml": "^3.12.0"
+  }
 }
