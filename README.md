@@ -20,6 +20,24 @@ source:
 
 ## Starting
 
-Copy `settings.example.yml` as `settings.yml` and fill it in.
+The docker image is build automatically every time the repo is pushed to git.
 
-Next run `npm start`.
+Just run the docker compose:
+
+```shell
+docker-compose up -d
+```
+
+## Development
+
+You can build an image:
+
+```shell
+docker build -t <image_name> .
+```
+
+And run it as follows:
+
+```shell
+docker run -it -v <path_to_config_file>:/home/node/app/config.yaml <image_name>
+```
